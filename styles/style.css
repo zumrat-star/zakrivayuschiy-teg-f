@@ -56,13 +56,13 @@
 .page {
   padding-block-start: 100px;
   color: var(--text-color, #000000);
-  font-family: var(--page-main-font-family, 'Inter', sans-serif);
+  font-family: var(--page-main-font-family, "Inter"), sans-serif;
   background-color: var(--page-background-color, #ffffff);
   background-image: var(--page-background-image, none);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  font-variation-settings: 'wght' var(--page-main-font-weight, 400);
+  font-variation-settings: "wght" var(--page-main-font-weight, 400);
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
@@ -78,11 +78,12 @@
   display: grid;
   justify-items: center;
   justify-content: center;
-  font-family: var(--page-accent-font-family, 'PressStart2P', fantasy);
+  font-family: var(--page-accent-font-family, "PressStart2P"), fantasy;
   line-height: normal;
   text-transform: uppercase;
   margin-block-end: 100px;
-  padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem) 0 clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem) ;
+  padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem) 0
+    clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
 }
 
 .page__header__title {
@@ -97,16 +98,15 @@
 .main {
   display: grid;
   justify-items: center;
-  gap: 57px;
+  gap: 50px;
   padding-block-end: 105px;
 }
-
 
 .modal {
   border: 2px solid var(--text-color, #000000);
   padding: 25px 30px;
   color: var(--text-color, #000000);
-  font-family: var(--page-accent-font-family, 'PressStart2P', fantasy);
+  font-family: var(--page-accent-font-family, "PressStart2P"), fantasy;
   line-height: 1.5;
   text-transform: uppercase;
   background-color: var(--page-background-color, #ffffff);
@@ -140,7 +140,6 @@
   inline-size: 100%;
 }
 
-
 .cards-list {
   display: grid;
   gap: 50px;
@@ -153,7 +152,7 @@
 .card__title {
   font-size: 18px;
   line-height: normal;
-  font-variation-settings: 'wght' var(--headings-font-weight, 700);
+  font-variation-settings: "wght" var(--headings-font-weight, 700);
 }
 
 .card__img-wrapper {
@@ -166,11 +165,11 @@
   z-index: 1;
   opacity: 0.5;
   color: var(--text-color, #000000);
-  font-family: var(--page-accent-font-family, 'PressStart2P', fantasy);
+  font-family: var(--page-accent-font-family, "PressStart2P"), fantasy;
   font-size: 14px;
   line-height: normal;
   text-shadow: 0 0 1px var(--page-background-color, #ffffff);
-  inset-inline-end: 30px;
+  inset-inline-end:  22px;
   inset-block-start: 25px;
   mix-blend-mode: hard-light;
 }
@@ -200,6 +199,14 @@
   padding: 25px 25px 23px 25px;
 }
 
+.card__like-button {
+  max-width: 130px;
+  max-height: 38px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card__icon-button {
   display: grid;
   border: 2px solid transparent;
@@ -223,7 +230,7 @@
   z-index: 1;
   border: 2px solid var(--text-color, #000000);
   padding: 10px 36px;
-  font-family: var(--page-accent-font-family, 'PressStart2P', fantasy);
+  font-family: var(--page-accent-font-family, "PressStart2P"), fantasy;
   font-size: 14px;
   text-transform: inherit;
   background-color: var(--page-background-color, #ffffff);
@@ -241,7 +248,7 @@
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--text-color, #000000);
@@ -272,7 +279,6 @@
   mix-blend-mode: difference;
 }
 
-
 .button__icon {
   block-size: 21px;
   inline-size: 21px;
@@ -299,12 +305,13 @@
   }
 }
 
-@supports ((-webkit-text-stroke: 1px var(--page-background-color, #ffffff)) or
-(text-stroke: 1px var(--page-background-color, #ffffff)))
-{
+@supports (
+  (-webkit-text-stroke: 1px var(--page-background-color, #ffffff)) or
+    (text-stroke: 1px var(--page-background-color, #ffffff))
+) {
   .card__img-label {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--page-background-color, #ffffff) ;
+    -webkit-text-stroke: 1px var(--page-background-color, #ffffff);
     text-stroke: 1px var(--page-background-color, #ffffff);
   }
 }
