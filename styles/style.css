@@ -111,6 +111,7 @@
   text-transform: uppercase;
   background-color: var(--page-background-color, #ffffff);
   max-inline-size: 353px;
+  font-size: 14px;
 }
 
 .modal[open] {
@@ -169,8 +170,8 @@
   font-size: 14px;
   line-height: normal;
   text-shadow: 0 0 1px var(--page-background-color, #ffffff);
-  inset-inline-end:  22px;
-  inset-block-start: 25px;
+  inset-inline-end: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
+  inset-block-start: clamp(1.5625rem, 1.4745rem + 0.3756vw, 1.8125rem);
   mix-blend-mode: hard-light;
 }
 
